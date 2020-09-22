@@ -14,8 +14,8 @@ import treeToo from 'auspice/src/reducers/treeToo'
 
 import { auspiceGeneralReducer, auspiceQueryReducer } from './auspice/auspice.reducer'
 
-const rootReducer = () =>
-  combineReducers({
+export function createRootReducer() {
+  return combineReducers({
     // BEGIN reducers from auspice
     metadata,
     tree,
@@ -30,5 +30,4 @@ const rootReducer = () =>
     query: auspiceQueryReducer,
     // END reducers from auspice
   })
-
-export default rootReducer
+}
