@@ -1,19 +1,6 @@
 import React from 'react'
 
-export function getHost() {
-  let host = ''
-  if (typeof window !== 'undefined' && window.location) {
-    const { protocol, hostname, port } = window.location
-    host = `${protocol}//${hostname}`
-    if (port) {
-      host = `${host}:${port}`
-    }
-  }
-  return host
-}
-
-const host = getHost()
-const exampleUrl = `/tree?json=${host}/ncov_small.json`
+const exampleUrl = `/tree?json=https://data.nextstrain.org/ncov_global.json`
 
 export default function Index() {
   return (
@@ -29,11 +16,7 @@ export default function Index() {
         </li>
         <li>
           <code>{'/tree?json=<URL>'}</code>
-          <span>
-            {
-              ' to display the tree with the data fetched from a remote URL. For example this will fetch a file served from our own public/ directory: '
-            }
-          </span>
+          <span>{' to display the tree with the data fetched from a remote URL. For example: '}</span>
           <div>
             <a href={exampleUrl}>
               <code>{exampleUrl}</code>
