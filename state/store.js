@@ -4,7 +4,7 @@ import { createRootReducer } from './reducer'
 
 const noop = () => undefined
 
-export async function configureStore({ router }) {
+export async function configureStore() {
   const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?? noop
   const store = createStore(createRootReducer(), {}, composeEnhancers())
 

@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps, router }) {
       .catch((error) => {
         throw error
       })
-  }, [router])
+  }, [router, router.query])
 
   if (!state) {
     return <Loading />
@@ -33,3 +33,5 @@ export default function MyApp({ Component, pageProps, router }) {
     </Suspense>
   )
 }
+
+MyApp.getInitialProps = () => ({})
