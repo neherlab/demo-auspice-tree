@@ -3,7 +3,7 @@ import { createAuspiceState } from './state/auspice/createAuspiceState'
 import { configureStore } from './state/store'
 import { fetchAuspiceJson } from './io/fetchAsupiceJson'
 
-import asupiceDataDefault from './data/ncov_small.json'
+import asupiceDataDefault from './data/auspiceDataDefault.json'
 
 export async function initialize({ router }) {
   let asupiceData = await fetchAuspiceJson(router)
