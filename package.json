@@ -15,9 +15,11 @@
   },
   "dependencies": {
     "auspice": "2.18.3",
+    "i18next": "19.7.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-i18next": "11.7.2",
     "react-redux": "7.2.1",
     "redux": "4.0.5"
   },

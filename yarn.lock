@@ -4450,7 +4450,7 @@ i18next-resource-store-loader@^0.1.2:
     loader-utils "^0.2.11"
     lodash "^4.6.1"
 
-i18next@^19.3.2:
+i18next@19.7.0, i18next@^19.3.2:
   version "19.7.0"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.7.0.tgz#e637bbbf36481d34b7d5e6d3b04e1bb654bf2a26"
   integrity sha512-sxZhj6u7HbEYOMx81oGwq5MiXISRBVg2wRY3n6YIbe+HtU8ydzlGzv6ErHdrRKYxATBFssVXYbc3lNZoyB4vfA==
@@ -6435,7 +6435,7 @@ react-hot-loader@^4.8.4:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-i18next@^11.3.3:
+react-i18next@11.7.2, react-i18next@^11.3.3:
   version "11.7.2"
   resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.7.2.tgz#b3cb94ad3b85c25e3d4802a141139d65238b976f"
   integrity sha512-Djj3K3hh5Tecla2CI9rLO3TZBYGMFrGilm0JY4cLofAQONCi5TK6nVmUPKoB59n1ZffgjfgJt6zlbE9aGF6Q0Q==
