@@ -7,7 +7,9 @@
   "scripts": {
     "monkey-patch": "bash tools/patch-auspice.sh && bash tools/patch-next.sh",
     "dev": "yarn install && yarn run monkey-patch && next dev --hostname 0.0.0.0 --port 3000",
-    "prod:build": "yarn install && yarn run monkey-patch && next build && next export"
+    "prod:build": "yarn install && yarn run monkey-patch && next build && next export",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,html,css,less,scss,yml,yaml}\"",
+    "format:fix": "yarn format --write"
   },
   "dependencies": {
     "auspice": "2.18.3",
