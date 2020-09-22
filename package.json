@@ -5,12 +5,20 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "yarn install && next dev --hostname 0.0.0.0 --port 3000",
-    "prod:build": "yarn install && next build && next export"
+    "monkey-patch": "bash tools/patch-auspice.sh && bash tools/patch-next.sh",
+    "dev": "yarn install && yarn run monkey-patch && next dev --hostname 0.0.0.0 --port 3000",
+    "prod:build": "yarn install && yarn run monkey-patch && next build && next export"
   },
   "dependencies": {
+    "auspice": "2.18.3",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "7.10.5",
+    "next-compose-plugins": "2.2.0",
+    "next-transpile-modules": "4.1.0",
+    "webpack": "4.44.2"
   }
 }
