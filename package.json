@@ -7,7 +7,9 @@
   "scripts": {
     "monkey-patch": "bash tools/patch-auspice.sh && bash tools/patch-next.sh",
     "dev": "yarn install && yarn run monkey-patch && next dev --hostname 0.0.0.0 --port 3000",
+    "prod": "yarn prod:build && yarn prod:serve",
     "prod:build": "yarn install && yarn run monkey-patch && next build && next export",
+    "prod:serve": "serve -l 8080 out/",
     "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,html,css,less,scss,yml,yaml}\"",
     "format:fix": "yarn format --write",
     "eslint": "eslint --format codeframe \"**/*.{js,jsx,ts,tsx}\"",
@@ -41,6 +43,7 @@
     "next-compose-plugins": "2.2.0",
     "next-transpile-modules": "4.1.0",
     "prettier": "2.1.2",
+    "serve": "11.3.2",
     "webpack": "4.44.2"
   },
   "resolutions": {
