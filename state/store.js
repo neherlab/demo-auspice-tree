@@ -1,9 +1,12 @@
 import { createStore } from 'redux'
 
-import createRootReducer from './reducer'
+import { createRootReducer } from './reducer'
+
+const noop = () => undefined
 
 export async function configureStore({ router }) {
-  const store = createStore(createRootReducer())
+  const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?? noop
+  const store = createStore(createRootReducer(), {}, composeEnhancers())
 
   if (module.hot) {
     // Setup hot reloading of the root reducer
