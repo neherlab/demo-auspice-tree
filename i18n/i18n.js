@@ -18,7 +18,6 @@ export function i18nInit({ localeKey }) {
     defaultNS: 'translation',
   })
 
-  // eslint-disable-next-line no-void
   void i18n.init()
 
   return i18n
