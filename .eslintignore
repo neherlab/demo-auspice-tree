@@ -1,0 +1,14 @@
+*.lock
+*.log
+\.cache
+\.env
+\.git
+\.gitignore
+\.idea
+\.ignore
+\.prettierignore
+\.vscode
+dist
+node_modules
+out
+public

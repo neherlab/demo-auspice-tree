@@ -3,12 +3,6 @@ const getWithTranspileModules = require('next-transpile-modules')
 
 const withIgnore = require('./config/next/withIgnore')
 
-const transpilationListDev = [
-  // prettier-ignore
-  'auspice',
-  'd3-scale',
-]
-
 // Process some of the node_modules, along with our source code
 const withTranspileModules = getWithTranspileModules([
   // prettier-ignore
