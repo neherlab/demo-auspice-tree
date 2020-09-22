@@ -1,0 +1,12 @@
+*.log
+.DS_Store
+\.cache
+\.env
+\.idea
+\.ignore
+\.next
+\.reports
+\.vscode
+dist
+node_modules
+out
