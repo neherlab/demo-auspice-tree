@@ -1,12 +1,12 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 
 import { createRootReducer } from './reducer'
 
-const noop = () => undefined
-
 export async function configureStore() {
-  const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?? noop
-  const store = createStore(createRootReducer(), {}, composeEnhancers())
+  const enhancer = applyMiddleware(thunk)
+  const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ?? compose
+  const store = createStore(createRootReducer(), {}, composeEnhancers(enhancer))
 
   if (module.hot) {
     // Setup hot reloading of the root reducer
