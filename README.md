@@ -27,16 +27,21 @@ yarn dev
 
 ```
 
+This will start a development server with Fast Refresh on `http://localhost:3000`.
+
 ### Production build
 
 ```bash
 yarn install
-yarn prod
+yarn prod:build
 
 ```
 
 This uses Next.js static export functionality. The build artifacts will be produced in directory `out/`. They can be
 deployed on any static webserver.
+
+You can then optionally run `yarn prod:serve` to start a static server locally which will listen on
+`http://localhost:8080`.
 
 ### License
 
