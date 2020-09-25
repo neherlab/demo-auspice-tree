@@ -8,6 +8,7 @@ What the "host" application needs in order to make the Tree component functional
 
 - import and render a React component
 - transpile imported modules (with webpack and babel), optionally ignore some of the problematic ones
+- adjust test framework configuration to transpile imported modules (e.g. `transformIgnorePatterns` in Jest)
 - have Redux store initialized and have Redux `Provider` in the component tree
 - have `redux-thunk` setup
 - have i18next initialized with translations from auspice and have `I18nextProvider` in the component tree
